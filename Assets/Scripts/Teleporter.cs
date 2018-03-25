@@ -9,14 +9,14 @@ public class Teleporter : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		myLight = GetComponent<Light> ();
-		myLight.enabled = false;
+		myLight.color = Color.red;
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		count = Player_Controller.count;
 		if (count >= 9) {
-			myLight.enabled = true;
+			myLight.color = Color.green;
 		}
 	}
 }
